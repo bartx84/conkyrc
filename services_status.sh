@@ -5,17 +5,16 @@
 #
 #core library
 #service manager library
+#import the global functions library
+source ~/conkyrc/services.sh
+serv_action=$2
 
-sprocess=$(service $1 status | grep Active)
-declare -a sdetails
-sdetails=( `echo "$sprocess" | tr '        ' ' '`)  
-serv_status=${sdetails[2]}
-if [ "$serv_status" = "(running)" ] || [ "$serv_status" = "(exited)" ]
+if [ "$serv_action" = "status" ]
 then
-echo "ACTIVE"
-elif [ "$serv_status" = "(dead)" ]
+service_status $1
+elif [ "$serv_action" = "switch" ]
 then
-echo "STOPPED"
+service_action $1
 else 
 echo "UNKNOWN"
 fi

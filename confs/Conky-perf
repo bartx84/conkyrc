@@ -1,0 +1,12 @@
+# you can use "bash getcoords.sh" to get coordinates of a cursor. Use „in the window“ coordinates!
+
+WINDOW_NAME="Conky-perf"
+
+###
+button-number button-name xL  xR  yT  yB command
+BUTTON_1      ssh  8 58 885 896 "~/conkyrc/services_status.sh ssh switch"
+BUTTON_2      apache2  8 58 898 910 "~/conkyrc/services_status.sh apache2 switch"
+BUTTON_3      openvpn  8 58 912 924 "~/conkyrc/services_status.sh openvpn switch"
+BUTTON_4      tor  8 58 926 938 "~/conkyrc/services_status.sh tor switch"
+BUTTON_5      i2p  8 58 939 951 "~/conkyrc/services_status.sh i2p switch"
+
