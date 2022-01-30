@@ -7,11 +7,6 @@ fi
 
 
 sudo apt-get install xdotool #xwininfo
-
-cd ../
-cp -arf ConkyClicky/. ~/.ConkyClicky
-
-USERNAME=`whoami`
-sed -i "s/my_username/${USERNAME}/g" ~/.ConkyClicky/cclicky.sh
+sudo apt-get install conky-all
 
 echo DONE.
